@@ -1,0 +1,40 @@
+Manual Run Through: What Happened?
+To start with, the algorithm has two variables "left" and "right".
+
+"left"(low) is 0 and represents the index of the first value in the array, and "right"(up) is 6 and represents the index of the last value in the array.
+
+
+ is the first index used to check if the middle value (7) is equal to the target value (11).
+ low=0
+ up=6
+ mid_value=math.floor(low+up/2)
+          =0+6/2
+          =3
+a[3]=7 is the first index used to check if the middle value (7) is equal to the target value (11).
+7==11 ?no
+
+7>11?no
+7<11 ?yes
+7 is lower than the target value 11, so in the next loop the search area must be limited to the right side of the middle value: [ 11, 15, 25], on index 4-6.
+to move to left
+so  low=0
+    up=mid-1
+      = 3-1
+      =2
+      mid=low+up/2
+         =0+2/2
+         =1
+
+To limit the search area and find a new middle value, "left" is updated to index 4, "right" is still 6. 4 and 6 are the indexes for the first and last values in the new search area, the right side of the previous middle value. The new middle value index is 
+
+
+The new middle value on index 5 is checked: 15 is higher than 11, so if the target value 11 exists in the array it must be on the left side of index 5. The new search area is created by updating "right" from 6 to 4. Now both "left" and "right" is 4, 
+, so there is only index 4 left to check. The target value 11 is found at index 4, so index 4 is returned.
+
+In general, this is the way the Binary Search algorithm continues to halve the array search area until the target value is found.
+
+When the target value is found, the index of the target value is returned. If the target value is not found, -1 is returned.
+
+
+to move to right
+low=mid+1

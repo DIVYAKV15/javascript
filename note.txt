@@ -1,0 +1,664 @@
+------ MODULE II --------
+-------- JAVASCRIPT --------
+
+   1. HTML to define the content of web pages
+
+   2. CSS to specify the layout of web pages
+
+   3. JavaScript to program the behavior of web pages
+
+- programming language (scripting language)
+featuring JAVASCRIPT
+-------------------
+- it is used to provide behaviour to a web application
+- it is used in both backedn and frontend
+   - initally js was intoduced as front end language
+  
+   - v8 engine used for chrome same for v8 engine helped js to turn  in browser
+   - then node js environments as introduced in this v8 engine provided(v8 engine to run the js outside the browser) so afterthat js can work as a backend language
+         - nodejs is a environment only just to run our language 
+
+   - providing behaviour -front end
+   - logical operations - back end (so node js will use)
+- It is categorised as dynamically typed language (i.e) data types changes according to the assigned value .
+         static type language like typescript (angular) - data types cannot be changed
+           ex; int i=10
+                   i ="int"
+                   this cannot be possible in static it will not change depend upon the value 
+                   where as in dynamic it will accept
+
+- single thread programming language - line by line exceution(with the help of stack)
+- it support both procedural and object oriented (oops) programminbg paradigm(style of programming)
+
+---------------- procedural programming ---------------
+
+backend
+
+first step node js needed:
+-------------------------
+             to check node open terminal and give node -v
+              -it will give the version 
+              - 16 and above needed 
+              - if not it will show error
+             if node is not there install 
+             - open browser node js download
+             - dont install either latest or old one because it will be in building stage so not be stable(so not support everything) so choose the version in between  
+
+- extension for js file -> filename.js
+
+display
+-------
+console log(print the content) -> predefined method
+shortcut to open the terminal in vscode: cmd+j(mac) /cntrl+j(windows)
+
+to run a file 
+------------
+node filename.js 
+
+\if it outside folder 
+dhivyakv@Dhivyas-MacBook-Pro MEARN_Lumniar_project % cd javascript
+dhivyakv@Dhivyas-MacBook-Pro javascript % node prgm1.js
+
+if its not working set the environment variable(windows)
+
+open controlpanel->system & security ->system-> advanced system setting ->environment variable -> from the system vriable ->edit -> change the variable name to node -> browse file ->then choose the path  like c.//programfiles//nodes
+
+datatypes
+--------
+thre are 2 types of datatypes 
+1 ) primitive data type
+     - base data type
+     - they are immutable (cannot changed the initialled value but we can reassigning is possible)
+        1 ) string - sequence of characters
+                   - eg: 'text' , ''text''
+        2) number - represents integer and floating point number
+                  - eg: 25 , 25.0
+        3 ) BigInt - it represent larger number outside the boundary of number category
+                   eg: 2^53
+        4)Null - intentional absence of value (empty value)
+                 eg: let x=null;
+        5)undefined - not assigned a value
+                 eg; let x;
+        6)Boolean - logical value - true or false
+        7)symbol - used to uniquely identified a content 
+                 - usually we use while creating libraries and packages (i.e) no.of codes will be there so to identify there we are using the symbol
+                 syntax:
+                 let varaible = symbol ('content')
+2 )non primitive data type
+     - derived data types
+     - mutable
+     - can change the original value and can reassiggn the new value 
+      
+       1)object - the data is stored in key : value pairs
+                - eg:  array, object, function etc.,
+                - combination of primitive data type
+
+variable
+--------
+- variables are used to store data
+- rules to create variables - identifiers
+    - variable name can have alphabets,numbers,uderscore etc;
+    - variable name should not start with digit but subsequence characters can be digits
+    - if the variable name contains more than one word - the words should not have space 
+     so camelcase -> variableName
+        snakecase ->variable_name
+
+        variable names are case sensitive
+      syntax:
+      ------
+      varaibleName = value;
+      or 
+      keyword varaibleName = value;
+
+ keyword
+ -------
+  - set of reserved word
+  - it give special meaing to the varaibles 
+
+    1 ) var - new value can be reassigned ,re declaration allowd ,hoisting possible it will show undefined, gloabl scope /functional scope not block level scope
+    2) const - reassigning is not possible , redeclaration not allowed,
+      hoisting not possible it will throw error, global scope
+    3) let -reassigning is possible,redeclaration not allowed, block level scope,hoisting not possible it will throw error
+
+hoisting
+-------
+- using a variable before it is declared 
+
+example:
+
+console.log(a);//hositing
+var a=10;
+
+Template Literals
+----------------
+- its a way of displaying content.
+synatx: use back stick 
+console.log(`content ${variable}`)
+
+concatenation
+-------------
+- add up two data
+- string + string = string
+- string + number = string
+- number + number = number
+
+to check the datatypes
+---------------------
+console.log(typeof(sum));
+
+operators
+---------
+1)Assignment operators
+2)Arithmetic operators
+  + - ? * %(modulus -remainder) ** (exponentials -power)
+3)Relational operators
+  < , > , <=, >=,
+   = -> assigning values
+   == -> compare only the value
+   === ->compare the value and datatype
+  - returns boolean value either true or false
+
+4 ) logical operators
+    - we use generally  between one or more relational operators
+    - returns boolean value either true or false
+   1 ) AND (&&)
+       -> T && T = T
+       -> T && F = F 
+       -> F && T = false
+        -> F && F = False
+     
+   2 ) OR (||)
+
+       -> T || T = T
+       -> T || F = T 
+       -> F || T = T
+       -> F || F = False
+
+   3 ) NOT (!)- inverse
+         !F = T 
+         !T = F   
+
+5 ) increment (++) / decrement (--)   
+  x++         x--
+  x=x+1        x=x-1
+
+6 ) shorthand operators
+   -  if left and right side have same vaiable name then only one time we can denote the name 
+   we can use this 
+   - for eg:  x=x+1        =>  then we can write x+=1;
+
+7) ternary operator 
+
+      -conditional operator
+       syntax:      condition?true stmt:fale stmt
+
+       ex:
+         for multiple condition
+       console.log(num>0'positive number':num==0?'neither positive nor negative':'negative number')
+
+8) truthy  operator 
+        - only one condition 
+        syntax
+        ------
+         condition && true statement
+
+         ex:
+
+         if only one if condition no else means can use truthy
+
+         x==10 && console.log('given number is 10');
+
+ 
+
+conditional statement / decision making statements
+--------------------------------------------------
+   -> only excute during condition satsify otherwise no need to run 
+1 ) if else statements
+    syntax
+    ------
+      if(condition){
+        stmt
+      }
+      else if(){
+        stmt
+      }
+      else{
+        stmt
+      }
+      - at a time any one case execute
+2 ) else if statements
+
+3 ) switch
+
+Looping statements
+------------------
+   same stmt rpreated aitu use cheyyan looping pakshe just one time mathi enkil condition
+- used to repeat a set of code repeatedly at a particular part of a program file. 
+- to exit from a loop the condition must be false 
+
+1) while
+-- no.of .iteration if we dont know then we use while
+    syntax
+    ------
+    variable initialization
+    while(condition){
+      stmt
+      exit condition /increment or decrement stmt
+    } 
+
+2 ) for 
+
+   syntax
+   ------ 
+
+   for(variable initialization ; condition ; exit condiiton){
+    stmt;
+   }
+
+   break - break forcefully exit a loop
+   continue - just exit that flow but continue the process
+
+  nested loop - pattern printing
+  ------------------------------
+  
+function
+--------
+boilerplate code means writing the same code again and again in the program to avoid this we are using function
+
+
+to perform a task repeated 
+
+- are used to 2 task repeated at different positions of a programming files
+- a function is having  2 parts
+  1) function definition
+  2) function call 
+
+  syntax - function definition
+  ---------------------------
+
+  funtion fname(parameters) {
+    stmt
+  }
+
+  syntax -   function call
+  ------------------------
+  fname(arguments) 
+
+ arguments and parameter - external data (data coming from outside )
+
+ -parameter- variable representing the data (variable used to store the value is parameter)
+ -arguments- actual value
+ 
+
+ - when the function is called only the function is excuted 
+  without function call the function will not excute
+  so function call is mandatory
+
+- inside functions variable are functional level scope cannot directly access from outside of the function
+
+- in order to access hte variable outside the function - the variable should return
+
+- no stmt after the return stmt will not excute
+the above defining the function the old versionof js
+from version 6 js - they are defining the function as arrow function
+
+Arrow function
+--------------
+
+const variable_name = ()=> stmt  
+
+-() parenthesis inside we give arguments
+- 1 line means just stmt or else {stmt}
+
+varaible_name()  -function call
+
+advantage
+---------
+-compare to syntax arrow function has less
+-if the arrow function is having single stmt the automatic return happen we need to specify the return 
+- so that arrow function has better performance
+
+functional hoisting
+-------------------
+- calling a function before its defined
+
+
+
+hoisitng not possible in arrrow function
+- functional hositing possible only in regular function but arrow function deos not support functional hositing
+
+types of function
+-----------------
+
+1) predeifned function
+  --------------------- 
+ -A pre-defined function is built into the software and does not need to be created by a programmer.
+
+   - theses are builtin functions for the javascript 
+   - no need to defined the function
+     eg: console.log() ,math.floor(), math.parseInt(),eval(),string(),number(),typeOf() etc...
+
+     advantages- our task complete easily
+
+2) callback functions
+   ------------------
+    - functions that are passed as an argument to another function and excuted later by the parent function  
+     
+     own refe:
+     ---------
+     Callbacks are used to ensure that certain code runs after some operation is completed.
+
+    Commonly used in asynchronous programming, such as handling API requests, reading files, or executing timed events.
+
+3)nested function
+ ----------------
+   - function defining inside aother function.
+
+   closure property 
+   ----------------
+     variable inside the parent function can be accessed inside the child function but the child variable caanot be accessed in the parent function
+
+     parent function il ula variable ne child nu access cheyyan patuum pakshe child nte variable nne parent nnu access cheyyan patilla
+
+4) synchronous function
+  ---------------------
+    - function which doestnot have any timedelay
+
+5) asynchronous function
+ ------------------------
+   - function with timedelay in exceution
+     eg:setTimeOut() ,api  - api is a  interface to communicate between the resources 
+
+     own reference:
+     --------------
+     APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.
+     How do APIs work?
+     ----------------
+     API architecture is usually explained in terms of client and server. The application sending the request is called the client, and the application sending the response is called the server. So in the weather example, the bureau’s weather database is the server, and the mobile app is the client.    
+
+
+DATASTRUCTURES
+--------------
+- a specialized format for organising,processing,retriving and storing data.
+ eg:linkedlist,array,tree,stack,queue,graph etc;
+
+ - array
+   -----
+   - unlike varaibles array can  hold more than one data 
+   definition : array is a single variable that can store more than one data of different datatypes that are seperated by commas and enclosed within square bracket[]
+
+   syntax:
+   ------
+   array_name=[data1,data2,data3,....]
+
+   - index 
+   -------
+   -each item in the array is given a index value 
+   - index value starts at 0 - length-1
+   - number of items in an array - length gives total no.
+
+this array data type is object 
+the data is stored as key:value pairs
+{
+  key:value = index:data
+}
+
+way to access each items from an array
+-------------------------------------
+1) for loop - if we need the items should return from particular position 
+2) for in - directly return the index of the given array
+3) for of - directly return the items from 0 to end
+
+Array operations(method)
+---------------
+1) push() - to add new element to the end of an  array
+2) pop() - to remove the last element in an array
+3) shift() - to remove the first element in an array
+4) unshift() - to add an new element to the start of an array
+5) sort()- it arrange the array in ascending or descending order
+6) forEach() -to access each item from an array- instead of for loop or for of 
+            - forEach() it returns void ..inside loop we can do some activity or log the op
+adv:
+---
+stmt is less 
+exceution time is less so better perfomance
+syntax:
+------
+array.forEach((varaible)=>stmt)
+
+7)map() - to acces each item from an array but it returns an new array of the same number of items in parent array (puthiyoru array aitu retun tharum , parents nte array da same length new array varum)
+
+syntax:
+------
+newArray=parentArray.map((varibale)=>stmt);
+
+and console the newArray to see the op
+
+8)reduce() - each item in a arrray check cheyum then single value retun tharum 
+      - its iterate through the array and return single value from the array
+ eg:lowest,highest,sum ,average
+
+ syntax:
+ ------
+ value=array.reduce((accumulator,current_valeu)=>stmt) 
+   
+   previous_value means accumulator value(The accumulator is typically initialized to a starting value and then updated with the results of each operation.) either specified value or  iteration cheythutu varna first value
+
+   own ref:
+   we can initialize an previous_value (accumulator) to 0 and then add previous value to the accumulator.
+  a and b are arguments
+ and console the value to see the op
+
+9) filter() - it return a new array having elemtns which is satisfying a specific condition 
+ syntax:
+ -------
+
+ newArray=parentArray.filter((variable_name)=>condition)
+
+ if there is any condition then we can use filter
+
+10)some() - it returns true or false (boolena value) based on the condition
+
+syntax:
+------
+boolean_value=array.some((variable)=>condtion)
+
+11) find() - condition satisfy cheyyana first element return tharum
+          - it return the first element satisfying the condition
+          syntax:
+          ------
+          value=parentAray.find((variable)=>condition)
+
+12) flat()- is used  to change the dimention of an array
+if we didnt pass depth then it comes down one dimension from an array
+        - 2d anneinkil 1d avum 3d meas its comes to 2d
+        depth - refers to how deep a nested arrray need to be flattened(reduced)
+flat(depth)- in depth we can chnage the desired dimension
+flat(2) - it change an array to 2d
+flat(infinity)- it change an array directly to single dimension
+depth is an argument
+
+13) includes()- to check a given item is present in the array or not
+
+diff btw some and includes
+--------------------------
+both return boolean value 
+some based on condition whereas includes based on element
+
+syntax:
+-------
+array.includes('item')
+
+14)splice() - (to activity in between the array)
+            - to add or remove items at different positions in an array
+syntax:
+------
+  array.splice(startIndex,countOfRemovalItems,itemsToBeAdded)  3 arguments should pass
+   
+15)indexOf()- to get a index of an element
+syntax:
+------
+array.indexOf('element')
+
+only can access the first index of an element
+if 2 elements present means it only return first element index
+
+16)lastIndexOf()-if 2 elements present means it only return last element index
+
+17)slice() - it gives a subarray from a parent array
+
+syntax:
+-------
+array.slice(startIndex,endIndex)
+
+endIndex - excluded (its not include its just to denote the range)
+-own ref:-slicing all the way to the endIndex of an array but it not included
+
+18)reduceRight()- it start the iteration from right but same like reduce it returns the single value
+
+linear search
+-------------
+The Linear Search algorithm searches through an array and returns the index of the value it searches for.
+how it works
+-----------
+1.Go through the array value by value from the start.
+2.Compare each value to check if it is equal to the value we are looking for.
+3.If the value is found, return the index of that value.
+4.If the end of the array is reached and the value is not found, return -1 to indicate that the value was not found.
+
+disadvantages
+------------
+time consuming 
+
+Binary search
+-------------
+time consumption by reducing the no.of iteration
+prerequite - in the given array should be in ascending order 
+
+algorithm
+---------
+ - it is the step-by-step procedure/instruction to solve a question
+
+flow chart 
+----------
+  - pictorial representation of the algorithm
+
+ oval- start
+ rectangle- stmt
+ diamond- decision making
+ parallelogram-input
+ arrow- flow/connection
+
+
+own refe
+-------
+
+Use Cases of Binary Search:
+--------------------------
+Binary search has various real-world applications, including but not limited to:
+
+Searching: Finding an item in a sorted list, like searching for a word in a dictionary.
+Finding boundaries: Identifying the first or last occurrence of an element in a sorted list.
+Square root approximation: Calculating the square root of a number efficiently.
+Interval-based problems: Solving problems that require finding an interval or range, such as scheduling conflicts.
+Divide and conquer algorithms: Serving as a crucial part of more complex algorithms like Merge Sort or Binary Search Trees.
+
+Identifying Problems Suitable for Binary Search:
+------------------------------------------------
+Binary search is most effective when the following conditions are met:
+
+Sorted data: The input data should be pre-sorted in ascending or descending order.
+Random access: The data structure should allow direct access to elements using an index, like arrays or certain list implementations.
+Large dataset: Binary search shines when searching through large datasets because it significantly reduces search time.
+
+Nested array
+-----------
+array within nested array
+
+string
+------
+
+- sequence of characters
+
+methods
+-------
+1) startsWith() - it check whether a string starts with a specific character.  
+             - this method is case sensitive
+             - return boolen value
+2)endsWith() - it check whether a string ends with a particular sequence
+            - case sensitive
+            - return a boolean value 
+
+3)toUpperCase()- to convert the given string into capital letters 
+4)toLowerCase()-to convert the given string into lower case 
+5)substring()- to create a sub string from a given array
+
+syntax:
+------
+string.substring(start,end)
+
+- ending 
+
+6)slice(start,end) - to get a small portion of an string
+                   - accept negative value as well
+                   - ending index will be excluded
+
+own: 
+like substring only but the difference here is we can pass negative value 
+
+7)trim() - remove the space in a given string
+         - it remove spaces in leading and tailing not inbeteween
+
+8)  replace() - it replcae first matching search item not the subsequent search item
+9)replaceAll() - it replaces all the matching search item
+10)array.from() - to get all character of a string as an array
+11)split(seperator) -divide the string  based on a seperator and return a new array
+   var name1='TECHNOLAB'
+   st=name1.split('O') //op-[ 'TECHN', 'LAB' ]
+
+
+
+negative value means staring from back 
+index - 0,1,2,3,4,(the index startes from left to right)
+negative value- -5 -4  ,-3 ,-2 ,-1 (the index startes from right to left)
+
+
+
+
+
+
+Naming conventions
+-----------------
+1)camelCase - subsequent words starts with capital letters
+            eg:myVariableName
+2)pascal case= all the words starts with capital letters
+              eg:MyVariableName
+3)snake case - subsequent words starts with underscore
+               eg:my_variable_name
+4) kebab case =all the words seperated with hyphon
+               eg:my-vaiable-name (not workded in js)
+
+5)screaming snake case= MY_VARIABLE_NAME
+
+object
+------
+- unlike array it can store more than one data of different dtatypes with more clarity  (own ref: we specify the name:value thats why its give more clarity)
+-definition:
+------------
+ object is a single variable that can store more than one data of different data type as key value pair, that are seperated by commas and enclosed within curly bracket{}
+syntax
+-----
+objectname={
+  key1:value1,
+  key2,value2,..
+}
+
+example:
+--------
+//[1000,'neel',developer,kochi,25000,3] - array we cant find what is 1000 and neel and all dont have clarity
+const employee={
+empId:1000,
+empName:'neel',
+empDesg:'developer'
+
+}
