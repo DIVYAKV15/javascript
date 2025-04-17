@@ -653,14 +653,6 @@ objectname={
   key2,value2,..
 }
 
-to access a data from object 
-
-         - objectname['key'] - can be used in the case of exact key or a variable key
-         - objectname.key  - only if there is exact key
-                 
-for in can be used to access of the keys in an object
-
-
 example:
 --------
 //[1000,'neel',developer,kochi,25000,3] - array we cant find what is 1000 and neel and all dont have clarity
@@ -670,3 +662,26 @@ empName:'neel',
 empDesg:'developer'
 
 }
+to access a data from object
+         - objectname['key'] - can be used in the case of exact key or a variable key
+         - objectname.key  - only if there is exact key
+                 
+for in can be used to access of the keys in an object
+
+add data:
+--------
+syntax
+------
+objectname['key']=value
+
+another way to add data
+
+object.assign()
+
+update the existing
+------------------
+objectname['key']=value  //reassigning the new value
+
+delete data
+----------
+delete objectname.key
