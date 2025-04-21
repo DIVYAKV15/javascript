@@ -2,7 +2,7 @@
 console.log("sum");
 
 num1=10;
-console.log("the value stored inside a varianle is:"+num1);
+console.log("the value stored inside a varianle is:"+num1); //concat
 
 console.log("the value stored inside a varianle is:",num1);
 

@@ -42,12 +42,15 @@ console.log(`5<a<20 ${!(5<a && a<20)}`) /* not -> if its false it will return tr
 // increment/decrement
 
 c=10;
-c ++
-console.log(c); 
+c++ //10+1
+console.log(c); //11
 
 b=5
 console.log(b++);/* before increment it will print b -> position is important */
+console.log(b); //here its 6
 
+console.log(b++);//here its 6 after that if we agin print the value of b it become 7
+console.log(b);
 a=5
 console.log(++a);/* now it will print 6 because first increment sign coming */
 
