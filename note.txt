@@ -30,8 +30,8 @@ featuring JAVASCRIPT
 - single thread programming language - line by line exceution(with the help of stack)
 - it support both procedural and object oriented (oops) programminbg paradigm(style of programming)
 
----------------- procedural programming ---------------
-
+ownref setup:
+------
 backend
 
 first step node js needed:
@@ -43,6 +43,19 @@ first step node js needed:
              if node is not there install 
              - open browser node js download
              - dont install either latest or old one because it will be in building stage so not be stable(so not support everything) so choose the version in between  
+---------------- procedural programming ---------------
+
+
+-programminhg paradigm where series of computational steps are carried out.unlike data and entites 
+
+own ref
+------
+In contrast to programming styles where data and entities are the main focus (like in object-oriented programming), this paradigm focuses on computational steps (like in imperative programming).
+own ref
+------
+A programming paradigm where a series of computational steps are carried out. Unlike data and entities being the primary focus, this paradigm emphasizes the control flow of the program—how operations are performed step by step to achieve a specific result. This is typical of the imperative paradigm, where instructions are given in a specific sequence, making it easier to understand the flow of execution but sometimes harder to manage complexity as applications grow.
+
+
 
 - extension for js file -> filename.js
 
@@ -685,3 +698,103 @@ objectname['key']=value  //reassigning the new value
 delete data
 ----------
 delete objectname.key
+
+
+Object Oriented Programming system -oops
+----------------------------------------
+- its a modern programming paradigm(style) which consider real time entities into class and objects
+-own ref:
+--------
+Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.
+
+basic concepts:
+--------------
+1) class - Blueprint which contains common features from which different objects are created 
+2) object - its a real time entity created from the class 
+3) reference - actual memory locations where properties and methods are stored
+
+property
+--------
+it is the variable inside a class
+
+method
+------
+functions inside a class
+
+instance variable
+-----------------
+ it is used to access the properties somewhere inside the class
+
+syntax 
+------
+
+class Classname{
+//properties
+//constructors 
+//method
+}
+
+- constructors are used for initializing the property
+-its also a prefdefined method inside the class
+and its automatically invoked(called) when the instance(object) for a class is created .
+- not mandatory to place all the 3 components(properties,constructors and method) inside the class 
+
+syntax for object
+-----------------
+purpose - in order to access outside of the class
+
+const objectname = new Classname()
+
+syntax for constructor
+----------------------
+constructor{
+
+}
+
+syntax to define a method 
+------------------------
+methodName(){
+
+}
+
+pillars of oops
+---------------
+1)Inheritance -classical inheritance
+2)polymorphism
+3)Encapsulation
+4)Abstraction
+
+1)Inheritance
+ ------------
+ -it is used to access mehtods and properties from one class to another
+ -parent class 
+               - the class from which data(properties and method) are taken 
+               - it is also called super class or base class
+ -child class
+              - the class which access the parent data
+              - it is also called as derived class and sub class
+ - extends keyword is used to inherit the dataf rom the parent class
+
+ types of classical inheritance
+ -----------------------------
+ 1)single inheritance
+ 2)multilevel inheritance
+ 3)hierarchial inheritance
+ 4)multiple inheritance
+ 5)hybrid inheritance
+
+
+js directly support these 3 inheritance:
+------------------------------
+ 1)single inheritance
+ 2)multilevel inheritance
+ 3)hierarchial inheritance
+
+ only partially supports this through mixin
+ ------------------------------------------
+  4)multiple inheritance
+  5)hybrid inheritance
+
+2)polymorphism
+ -------------
+ 
