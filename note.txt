@@ -349,8 +349,11 @@ types of function
 
    - theses are builtin functions for the javascript 
    - no need to defined the function
-     eg: console.log() ,math.floor(), math.parseInt(),eval(),string(),number(),typeOf() etc...
-
+     eg: console.log() ,math.floor(), math.parseInt(),eval(),string(),number(),typeOf(),etc...
+        eval()- oru expression ne evalute cheythu tharan anu use cheyyan
+        ex:
+        exp='10/2*5'
+        eval(exp)
      advantages- our task complete easily
 
 2) callback functions
@@ -636,7 +639,7 @@ index - 0,1,2,3,4,(the index startes from left to right)
 negative value- -5 -4  ,-3 ,-2 ,-1 (the index startes from right to left)
 
 
-
+spread operator(...)-merge an array
 
 
 
@@ -797,4 +800,56 @@ js directly support these 3 inheritance:
 
 2)polymorphism
  -------------
- 
+ polymorphism -manyforms
+
+ real time example
+ ----------------
+ payment gateway - differnt payment gateway(razor pay etc.,) but all are doing payment
+
+ 1)method overloading
+ --------------------
+   - method with same name but different arguments
+   - excutes based on the no.of arguments
+   - directly js is not supporting method overloading 
+   - rest operator(...)-it make the arguments into an array
+
+ 2)method overriding 
+ -------------------
+    - methods with same name and smae no.of.arguments 
+    -excute last written method
+    -js support method overriding
+
+3)Encapsulation
+---------------
+our class nte agathu data and method ndavum thats i single entity
+oru capsule nte ulu illa single entity
+
+practice of hiding the internal details of an object and exposing only the necessary information to the outside world.
+
+4)Abstraction
+-------------
+
+hiding the functionality 
+
+Abstraction can be defined as the concept of hiding the inner complex workings of an object and exposing only the essential features to the user.
+
+
+Exception handling
+-----------------
+exception - Run time error
+
+-try-catch block
+
+syntax
+------
+try{
+  stmt
+}
+catch{
+      (incase error vannal enthu cheyyanam nu parayanum in catch)
+       stmt -excute only whent the error throws in try block
+} 
+finally{
+        ( either try or catch if we want to excute any stmt in that case finally will work)
+        stmt
+} 
