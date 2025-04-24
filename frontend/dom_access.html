@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM access</title>
+</head>
+
+<body>
+    <h2 id="unique">Welcome</h2>
+    <h1>DOM</h1>
+    <h1 class="class1">DOM2</h1>
+    <p class="class1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, voluptatem minima. Adipisci ipsam
+        atque odit placeat fugiat quia officiis dicta expedita corporis id vel accusantium, corrupti beatae iure nulla
+        amet. </p>
+    <button onclick="change()">Click</button>
+    <!--onclick is an event and change() created a function so when the user clcik the content of first h1 tag has to change  -->
+</body>
+<script>
+    //internal js 
+
+    // const content = document.getElementsByTagName('h1')
+    // console.log(content[1]);//content[0]-can access first h1 tag
+    // //content[1]-can access second h1 tag
+    // //inside console in page
+    // //HTMLCOLLECTION [h1,h1]
+    // //0:h1
+    // //1:h1
+    // //length:2
+    // //it stored as object so we can access by content[0]
+
+    // //if we want to change the content of the h1 tag
+    // content[0].innerHTML='Document object model'
+
+    // created a function so when the user clcik the content of first h1 tag has to change
+    function change() {
+        //using tag-document.getElementsByTagName('h1')
+        const content = document.getElementsByTagName('h1')
+        console.log(content[1]);//content[0]-can access first h1 tag
+
+        content[0].innerHTML = 'change when user clicks'
+
+        //using classname-document.getElementsByClassName('class1')
+
+        const classname = document.getElementsByClassName('class1')
+        console.log(classname);
+        classname[1].innerHTML = "when the user clicks the paragraph has to change"
+        //to change the color when user clicks
+        classname[1].style.color = 'red'
+        classname[0].style.color = 'yellow'
+        classname[1].style.backgroundColor = 'violet'
+        classname[1].style.display = 'inline-block' //if we give inline block the bg color will not cover fully only the paragraph size bg color will be there
+
+        //using id -documentGetElementById('id')
+        // const id_unique = document.getElementById('unique')
+        // console.log(id_unique);//op-<h2 id='unique'>welcome</h2>
+        // id_unique.innerHTML = 'Document Object Model'
+        //as id is unique only one will be there so no need to provide index
+
+        //instead of giving the above lines can directly give id like this thats why id is popular id_unique.innerHTML = 'Document Object Model'
+       
+        id_unique.innerHTML = 'Document Object Model'
+        id_unique.style.color = 'blue'
+        id_unique.style.fontSize = '100px'
+
+        //using query selctor-document.querySeclector()
+    }
+</script>
+
+</html>

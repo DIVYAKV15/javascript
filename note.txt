@@ -46,7 +46,14 @@ first step node js needed:
 ---------------- procedural programming ---------------
 
 
--programminhg paradigm where series of computational steps are carried out.unlike data and entites 
+-programming paradigm where series of computational steps are carried out.unlike OOPS,porcedural consider both data and emthod are 2 differnt  entites 
+
+own ref:
+-------
+procedural pgrm-react 
+js anenkil -static typed language
+ts- dynamically typed language
+oops-angular 
 
 own ref
 ------
@@ -57,7 +64,11 @@ A programming paradigm where a series of computational steps are carried out. Un
 
 
 
-- extension for js file -> filename.js
+- extension for js file -> filename.js 
+
+outsdie browser anu namal run cheyanu so we using
+
+    node filename.js
 
 display
 -------
@@ -221,7 +232,37 @@ operators
 
          x==10 && console.log('given number is 10');
 
- 
+ 9)spread operator - ...
+  merge the array
+The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object
+
+ex: 
+
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+
+op:1,2,3,4,5,6
+
+10)rest operator - ...
+the value which we pass as converted into array  
+ex:
+class A {
+    method1(...args) {
+        if (args.length === 0) {
+            console.log('first method logic');
+        } else if (args.length === 1) {
+            console.log('second method logic');
+        } else {
+            console.log('third method logic');
+        }
+    }
+}
+const obj = new A();
+obj.method1();        // first method logic
+obj.method1(10);      // second method logic
+obj.method1(10, 20);  // third method logic
+
 
 conditional statement / decision making statements
 --------------------------------------------------
@@ -840,6 +881,10 @@ exception - Run time error
 
 -try-catch block
 
+own ref:
+--------
+usecase:server side il error handle cheyyan use cheyyum
+
 syntax
 ------
 try{
@@ -853,3 +898,93 @@ finally{
         ( either try or catch if we want to excute any stmt in that case finally will work)
         stmt
 } 
+
+--------backend end here (logical operations)-------------
+banckend il js yae run cheyyanadhu node anu 
+whereas in frontend browser aanu
+
+
+js in frontend
+--------------
+- run by browser 
+- Browser is an application program that provides an interface to interact with all the information/resources available in the internet /www 
+- browser understanding language are HTML,CSS,JS
+-JS provides behaviour(interaction) to the webpage
+
+own:
+   js behaviour cheyyanum enkil uit has to access the html if it throw error the error(content) will be in html 
+
+-Js access the DOM structure to provide the behaviour 
+
+DOM 
+---
+-Doument Object MODULE
+-its a tree structure of html document 
+  //ee dom nae anu js access cheyyanu to create behaviour 
+-we can see the DOm structure in browser by clicking inspect under the tab elements so browser created that DOM structure 
+// oru html document yae browser il run cheyyumbo broswer athinu oru DOM structure nae create cheyyum
+
+ways to apply js in html document
+---------------------------------
+1)Internal
+----------
+  <script>
+     
+  </script> -after the body 
+- We can place the <script> tag either in the <head> or at the end of the <body>.
+
+-But it's preferred to place it at the end of the <body>, because if it's in the <head>, the browser will load the JavaScript before the page content, which can delay page rendering.
+
+-If we place it in the <body>, all the content will load first, and then the behavior (JavaScript) will be applied — which is a good practice.
+
+-This way, when the user sees the page, they can start interacting with it immediately, even if the JavaScript is still loading 
+
+these al helps for optimization
+
+2)External
+----------
+css we give in link tag href to the css file whereas here
+<script src='path to the external file'></script>
+external file- filename.js
+
+way to acces html elements(tag+content) using js
+-----------------------------------
+1) document.getElementByTagname() -return an HTML COLLECTION having all the specified tag in the html document
+
+2) document.getElemntByClassname()-return an HTML COLLECTION of all the tag which having the same class name
+
+3) document.getElementById()-return the tag which having the id
+
+4) document.queryselector()- can accept tag,call name,id name
+  - if we want to pass the id - '#id_name'
+  -if we want to pass the tag name - just give the tag name
+  - if we want to pass the class name -'.className' but it returns only hte first mentioned class name
+    
+5) document.querySelectorAll()-can accept tag,call name,id name
+- return the all satisfying tag as nodelist 
+
+ways to access content from a html tag -after accessing the element if we want to update the content
+--------------------------------------
+innerHTML 
+
+Events
+------
+Events are actions performed by the user which leads to a change in DOM
+
+eg:Click,submit,load,change,keydown(enter press cheyanadhu), keyup (press cheythu release cheyanadhu) etc.,
+
+own:
+What’s the difference between the DOM and the HTML source code?
+✅ HTML source code is the static code written by the developer – it’s what you see in the .html file or when you "View Page Source" in the browser.
+✅ DOM (Document Object Model) is a live, dynamic tree-like structure created by the browser when it parses the HTML. It can change while the page is running (due to JavaScript).
+ex:
+HTML source code:
+<p id="demo">Hello</p>
+DOM (after JavaScript changes it):
+<p id="demo">Hello World!</p>
+
+date 
+----
+date is predefined class to fetch data from the system
+
+date is a class so to access it create an instance for the class and use their methods as per our need
