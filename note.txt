@@ -659,6 +659,7 @@ string.substring(start,end)
 6)slice(start,end) - to get a small portion of an string
                    - accept negative value as well
                    - ending index will be excluded
+                   eg:slice(0,-1) - >-1 item will be removed
 
 own: 
 like substring only but the difference here is we can pass negative value 
@@ -982,9 +983,40 @@ HTML source code:
 <p id="demo">Hello</p>
 DOM (after JavaScript changes it):
 <p id="demo">Hello World!</p>
-
+-----------------
 date 
 ----
 date is predefined class to fetch data from the system
 
 date is a class so to access it create an instance for the class and use their methods as per our need
+
+----------------
+own:
+garbage collection- unused variable nte memorylocation yae remove chayyum
+----Javascript garbage collection is an essential process in programming languages that dynamically manage the memory. In JavaScript, the garbage collector uses the mark-and-sweep algorithm to identify and remove objects and variables that are no longer in use.
+
+Database
+--------
+- used to store data 
+- huge amount of data can be stored in db 
+- permanaent storage or we have to manually remove 
+
+
+browser strorage
+----------------
+own - how to see browser storage - from browser inspect->after console -> >> click this ->application -> storage ->local storage permanaent we ahve to clear it manually ->session -once the seession close the memory will be wiped
+ whereas browser storage can store oly small amount of data
+ both permanent and temporary storage is possible
+1)local storage  
+    - permanent storage
+2)session storage 
+    - temporary storage
+
+operations(how to store)
+------------------------
+1)Add data  - setItem('key','value') - Both key and value should be strings.
+2) get data - getItem("Key") -Retrieves the data stored with the given key.( key il store cheytha data nne get cheyyan patum )
+3) updata data - setItem('key','value') - Use the same method as adding. If the key already exists, the value will be update
+4)delete data - removeItem("key") - just provide the key of the item you want to remove.
+
+json.stringfy-to convert into a string

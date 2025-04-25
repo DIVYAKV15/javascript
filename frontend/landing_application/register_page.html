@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Application</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header
+        style="background-image: url('https://media.istockphoto.com/id/1405728317/vector/global-network-connection-world-map-point-and-line-composition-concept-of-global-business.jpg?s=612x612&w=0&k=20&c=u_DZ9MwU6DFC0-TVD4qnZFmHDu2PoWYhDzppUaijv-c='); width: 100%; height: 50vh; background-repeat: no-repeat; background-size: cover; background-position: center;">
+        <nav class="navbar ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h1 class="text-light">
+                        <i class="fa-solid fa-house  me-3" style="color: #fafafa;"></i>
+                        Landing Page<h1>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="p-3 mt-3">
+            <h3>Welcome to our <span class="text-primary">Website</span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptas accusantium cumque non
+                accusamus excepturi reprehenderit deleniti, atque facilis dolores sapiente odio quibusdam id repellat.
+                Sapiente consequuntur odio similique consectetur?Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Libero facilis aut blanditiis, perspiciatis est reprehenderit soluta voluptas doloremque nesciunt
+                quibusdam nostrum culpa expedita obcaecati excepturi omnis ipsum ut ad assumenda?</p>
+        </div>
+        <div class="container px-5 ">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://media.istockphoto.com/id/1384437843/vector/woman-protecting-data-privacy-with-password.jpg?s=612x612&w=0&k=20&c=47Rxqa55herdwgwyNh_qusCI3mmMJ23Fd1y5kFP-M8s="
+                        alt="no_image" class="w-100">
+                </div>
+                <div class="col-md-5 px-3 mt-2">
+                    <form action="" class="p-5 shadow rounded"
+                        style="background-image: linear-gradient(to right, rgb(156, 156, 161), rgb(102, 102, 162) );">
+                        <h4 class="text-center text-white mb-4">Register</h4>
+                        <div class="mb-3">
+                            <input id="reg_username" type="text" placeholder="Username" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input id="reg_password" type="text" placeholder="password" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-primary w-100" onclick="obj.register()">Register</button>
+                        </div> 
+                        <!-- as we are accessing the method outside of class we have to use the obj(objectname which we created in script.js) -->
+
+                        <p>Are you a already User?<a href="./login_page.html">Login Here</a></p>
+                    </form>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="./script.js"></script>
+
+</html>

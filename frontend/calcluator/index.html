@@ -12,37 +12,38 @@
     <h1 style="text-align:center;margin-top: 10%;">calculator</h1>
     <div class="container">
         <div class="buttons">
-            <input type="text" placeholder="0">
-            <button class="clear">AC</button>
-            <button class="backspace">
+            <input id="result" type="text" placeholder="0">
+            <button class="clear" onclick="clearAll()">AC</button>
+            <button class="backspace" onclick="backButton()">
                 <img src="https://cdn2.iconfinder.com/data/icons/css-vol-1/24/backspace-1024.png" alt="" width="20px"
                     height="20px">
             </button>
-            <button class="clear">%</button>
-            <button class="operator">/</button>
+            <button class="clear" onclick="display('%')">%</button>
+            <button class="operator" onclick="display('/')">/</button>
 
-            <button class="number">7</button>
-            <button class="8">8</button>
-            <button class="9">9</button>
-            <button class="operator">*</button>
-           <button class="4">4</button>
-            <button class="5">5</button>
-            <button class="6">6</button>
-            <button class="operator">-</button>
-
-
-            <button class="4">1</button>
-            <button class="5">2</button>
-            <button class="6">3</button>
-            <button class="operator">+</button>
+            <button class="number" onclick="display(7)">7</button>
+            <button class="8" onclick="display(8)">8</button>
+            <button class="9" onclick="display(9)">9</button>
+            <button class="operator" onclick="display('*')">*</button>
+            <button class="4" onclick="display(4)">4</button>
+            <button class="5" onclick="display(5)">5</button>
+            <button class="6" onclick="display(6)">6</button>
+            <button class="operator" onclick="display('-')">-</button>
 
 
-            <button id="zero">0</button>
+            <button class="4" onclick="display(1)">1</button>
+            <button class="5" onclick="display(2)">2</button>
+            <button class="6" onclick="display(3)">3</button>
+            <button class="operator" onclick="display('+')">+</button>
 
-            <button class="operator">.</button>
-            <button class="operator">=</button>
+
+            <button id="zero" onclick="display(0)">0</button>
+
+            <button class="operator" onclick="display('.')">.</button>
+            <button class="operator" onclick="equalTo()">=</button>
 
         </div>
 </body>
+<script src="./script.js"></script>
 
 </html>

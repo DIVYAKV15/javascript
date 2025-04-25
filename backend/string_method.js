@@ -9,17 +9,17 @@ console.log(str.toUpperCase());
 console.log(str.toLowerCase());
 //substring
 str3=str.substring(2,str.length) // or str3=str.substring(2) it will go till last value
-console.log(str3); //cut the string inbetween
+console.log(str3); //cut the string inbetween   op:Minar
 
 //slice
 str4=str.slice(2,4)
-console.log(str4);
+console.log(str4);//op:Mi
 
 str5=str.slice(-5,-3)
-console.log(str5);
+console.log(str5);//op:Mi
 //trim
 text= '          hello'
-console.log(text.trim());//leading starting spacing tailing means ending space 
+console.log(text.trim());//leading starting spacing tailing means ending space  op:hello
 
 //replace
 
@@ -29,6 +29,11 @@ console.log(sentence.replaceAll('Microsoft','google'));
 //array.from()
 s=Array.from(str)
 console.log(s);
+//op:[
+//     'l', 'u', 'M',
+//     'i', 'n', 'a',
+//     'r'
+//   ]
 var name1='TECHNOLAB'
 name2='LUMINAR TECHNOLAB'
 st1=name2.split(' ')// op-[ 'LUMINAR', 'TECHNOLAB' ]
