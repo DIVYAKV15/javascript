@@ -1020,3 +1020,7 @@ operations(how to store)
 4)delete data - removeItem("key") - just provide the key of the item you want to remove.
 
 json.stringfy-to convert into a string
+json.parse- to convert the string back to object
+
+to move from one page to another page we use <a> tag  in html whereas in js
+window.location="filename.html"

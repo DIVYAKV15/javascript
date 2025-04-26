@@ -47,13 +47,13 @@
                         style="background-image: linear-gradient(to right, rgb(156, 156, 161), rgb(102, 102, 162) );">
                         <h4 class="text-center text-white mb-4">Login</h4>
                         <div class="mb-3">
-                            <input type="text" placeholder="Username" class="form-control">
+                            <input id="log_user" type="text" placeholder="Username" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <input type="text" placeholder="password" class="form-control">
+                            <input id="log_pwd" type="text" placeholder="password" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-primary w-100">Login</button>
+                            <button type="button" class="btn btn-primary w-100" onclick="obj.login()">Login</button>
                         </div>
 
                         <p>Are you a New User?<a href="./register_page.html">Register</a></p>
