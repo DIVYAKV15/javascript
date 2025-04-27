@@ -4,6 +4,7 @@ class Landing {
     //properties 
     //database type is a object or json object
     database = {
+        //key and username should be same its case senstitive
         'appu': { username: "appu", password: "appu123" }, //appu is akey that identifies the user
         'ponnu': { username: "ponnu", password: "ponnu123" },
         'raj': { username: "raj", password: "raj123" },
@@ -57,9 +58,11 @@ class Landing {
         } else {
             if (log_user.value in this.database) {
                 if (this.database[log_user.value].password == log_pwd.value) {
+                    localStorage.setItem('user', log_user.value) //to show the user name in home page so before alert we have to give bcoz after alert means its refresh
+                    //storing the username in localstroge under user key
                     alert('login successful')
-                    window.location='home_page.html'
-                }else{
+                     window.location = 'home_page.html'
+                } else {
                     alert('incorrect password ')
                 }
 
