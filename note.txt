@@ -1015,8 +1015,8 @@ own - how to see browser storage - from browser inspect->after console -> >> cli
 operations(how to store)
 ------------------------
 1)Add data  - setItem('key','value') - Both key and value should be strings.
-2) get data - getItem("Key") -Retrieves the data stored with the given key.( key il store cheytha data nne get cheyyan patum )
-3) updata data - setItem('key','value') - Use the same method as adding. If the key already exists, the value will be update
+2)get data - getItem("Key") -Retrieves the data stored with the given key.( key il store cheytha data nne get cheyyan patum )
+3)updata data - setItem('key','value') - Use the same method as adding. If the key already exists, the value will be update
 4)delete data - removeItem("key") - just provide the key of the item you want to remove.
 
 json.stringfy-to convert into a string
@@ -1024,3 +1024,182 @@ json.parse- to convert the string back to object
 
 to move from one page to another page we use <a> tag  in html whereas in js
 window.location="filename.html"
+
+--------------------------------------
+
+API-  APPlication programming interface
+--------------------------------------
+- it is used to communicate btw different resourced available in the internet
+types of api
+------------
+1)public api
+2)private api
+3)partner api
+4)composite api
+
+1)public api - publicly available(can access freely without the user credential)
+2)private api- only a single use within comapny(need credentials(secret keys) to access )
+3)partner api -datasahare between 2/3 companies/users( need credentials)
+4)composite api- Interconnected n/w of different apis (some can access freely and some we need credentials)
+
+HTTP-hypertext Transfer protocols
+---------------------------------
+set of internet rules that need to be follwed while transfering data btw the resources in internet
+
+eg:https,ftp,smtp,tcp,udp etc.; (need to refer)
+
+http request (CRUD)
+-----------
+1)get - to retrieve data from other resources
+2)post - to add data (to create data)
+3)put - to update existing data 
+4)delete-to remove the data
+
+Request have 2 parts 
+--------------------
+1)request header-secret keys,content-type
+2)request body-data send 
+
+JSON format
+-----------
+
+javascript object notation 
+  - its a common format to share data btwn the resources
+     for eg:frontend is js and backedn in python 
+     if js transfer the data to python in js then python will not understand 
+     so both should communicate in common format thats is json 
+     so data backend il send cheyymbo json format il send cheyyanam 
+
+  -format
+   {
+    "key":value,
+   }
+   "key" must be string but value can be either  number,string or array or object anything
+
+   eg:
+   ---
+
+   {
+    "username":"name",
+    "email_id":"",
+    "pwd":"sd",
+    "age":26
+    "data1":{},
+    "data2":[],
+   }
+
+response series
+---------------
+1XX 100-199 - information  (getting some infor from server side- like request sending)
+2xx - success response (200)
+3xx - redirection (path change ) (getting some infor from server side like ti going to path)
+4xx - failure -client side error(improper data send ,improper token send ,404 page not found (klike client not giving path properly)etc.,)
+5xx - error -server side errors(like improper deploy,not running properly,or logica error )
+
+
+both 400 and 500 are indicationg error but differnet errors
+100 and 300 just information
+
+url
+---
+Uniform Resource Locator - its a address 
+
+own:api means commuunicate between 2 resources 
+so which resource the address has to be given 
+there are millions of resources of internet so every website has a address that  is URL  to coomunicate with
+
+-RESTFUL api architecture is this entire thing from http to url 
+
+
+for eg:frontend and backedn are communicating using api so use http method to coomunicate with crud operation in json format and we receive the response in 100,200,300,400,500 series depend upon the response frontend behaviour will happen this stle of transfering is rest architecture
+
+refere:soap,rpc
+
+own:
+
+REST (Representational State Transfer) is an architecture style that defines how two systems (like frontend & backend) should communicate over the internet using HTTP methods.
+
+
+1.HTTP Methods for CRUD
+
+REST uses HTTP verbs to map to database operations:
+
+GET → Read data
+
+POST → Create data
+
+PUT or PATCH → Update data
+
+DELETE → Delete data
+
+2.Data Format (usually JSON)
+
+The data is typically sent and received in JSON format.
+
+Frontend sends a request (with/without data) and backend replies with a JSON response.
+
+3.Response Codes (Status)
+
+200 OK → Success
+
+201 Created → Resource created
+
+400 Bad Request → Invalid input
+
+401 Unauthorized → No permission
+
+404 Not Found → Resource doesn't exist
+
+500 Internal Server Error → Server problem
+
+4.stateless Communication
+
+Every API request is independent, meaning the server doesn’t remember any previous interaction (no session stored).
+
+This style of transferring data between frontend and backend using HTTP methods, JSON, and standard response codes is REST architecture.
+--------
+and GraphQL is a style of building APIs, just like REST, but it's more query-driven instead of URL-driven.
+
+You send a query to the server describing exactly what data you want.
+
+The server replies with just that data, nothing more, nothing less.
+
+REST vs GraphQL (Quick Comparison)
+Feature	 
+        
+       REST	
+Style -	URL + HTTP methods (GET/POST...)	
+GraphQL
+        -Single endpoint, query language
+        REST	
+
+Endpoints	- Many (e.g., /users, /posts)	
+GraphQL
+        One (usually /graphql)
+Data Fetching   REST-	Fixed response shape	
+Data Fetching  GraphQL -You choose the data shape
+Over-fetching	REST -Common (get more than needed)	Over-fetching	 GraphQL-Avoided (get only what you ask)
+Under-fetching REST-	Requires multiple calls	           
+              Combine into one query
+
+
+tools to test api is working fine or not
+----------------------------------------
+1)postman -real tool
+2)thunder client -vs code extension only if we are using vs code or else not possible
+
+techniques to create api in frontend
+-----------------------------------
+either one way can use to create api in frontend
+
+1) AJAX - asynchronous javascript xml
+2) fetch 
+3) async-await
+
+1) AJAX - Asynchronous Javascript Xml
+--------------------------------------
+- works based on XMLHTPPRequest() class
+   XMLHTPPRequest() class -predefined class in js which containes some methods and properties 
+   
+- open()- connection betweent the resource(request connection establishment  )
+-send()- request is send to the other resource
