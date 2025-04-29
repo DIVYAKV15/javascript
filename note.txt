@@ -667,14 +667,15 @@ like substring only but the difference here is we can pass negative value
 7)trim() - remove the space in a given string
          - it remove spaces in leading and tailing not inbeteween
 
-8)  replace() - it replcae first matching search item not the subsequent search item
+8) replace() - it replcae first matching search item not the subsequent search item
 9)replaceAll() - it replaces all the matching search item
 10)array.from() - to get all character of a string as an array
 11)split(seperator) -divide the string  based on a seperator and return a new array
    var name1='TECHNOLAB'
    st=name1.split('O') //op-[ 'TECHN', 'LAB' ]
 
-
+12)String.fromCharCode
+13)charCodeAt
 
 negative value means staring from back 
 index - 0,1,2,3,4,(the index startes from left to right)
@@ -1116,6 +1117,7 @@ for eg:frontend and backedn are communicating using api so use http method to co
 refere:soap,rpc
 
 own:
+---
 
 REST (Representational State Transfer) is an architecture style that defines how two systems (like frontend & backend) should communicate over the internet using HTTP methods.
 
@@ -1157,6 +1159,16 @@ Frontend sends a request (with/without data) and backend replies with a JSON res
 Every API request is independent, meaning the server doesn’t remember any previous interaction (no session stored).
 
 This style of transferring data between frontend and backend using HTTP methods, JSON, and standard response codes is REST architecture.
+
+Frontend uses fetch() to make an HTTP request
+
+Sends URL + method + query params
+
+Gets back JSON
+
+Handles the response code
+
+Updates UI accordingly
 --------
 and GraphQL is a style of building APIs, just like REST, but it's more query-driven instead of URL-driven.
 
@@ -1198,8 +1210,45 @@ either one way can use to create api in frontend
 
 1) AJAX - Asynchronous Javascript Xml
 --------------------------------------
-- works based on XMLHTPPRequest() class
-   XMLHTPPRequest() class -predefined class in js which containes some methods and properties 
-   
-- open()- connection betweent the resource(request connection establishment  )
--send()- request is send to the other resource
+- works based on XMLHttpRequest() class
+ 
+        XMLHttpRequest() class -predefined class in js which containes some methods and properties 
+
+- open() - connection betweent the resource(request connection establishment  )
+- send() - request is send to the other resource
+- readyState - property in the class
+- onreadystateChage()=check the change in value of readyState
+- status - property in the class which of the response status from the application with which we are communicating
+- responseText- holds the data from the application
+
+
+another way to use to create api in frontend
+
+Fetch
+-----
+ -like AJAX ,works based on XMLHttpRequest() class whereas in fetch works based on Promise class
+
+ - promise class have the ability to resolve Asynchronous functions
+
+ - promise have three phases
+
+ 1) resolve phases
+   ---------------
+       - nammal kodutha request proper aitu solve cheythutu enkil resolve phases 
+
+       - if hte request is properly solved
+       -then() - response can be accessed using then method 
+
+ 2) pending phases
+ -----------------
+      - nammal kodutha request nae reject um cheythutu illya or resolve um cheythutu illya
+      -so we cant see that so no method for that
+      -neither resolved nor reject
+
+ 3) reject phases
+ -----------------
+      -  nammal kodutha request proper aitu solve cheyyan patitillya enkil  reject phases 
+      - if hte request is not properly solved
+      -catch()- response will be accessed usinv catch method
+
+ 
