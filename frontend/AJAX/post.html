@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px double black;
+            /* width: 30%; */
+            text-align: center;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mt-10">User_details</h1>
+
+    <div class="flex justify-center items-center">
+        <table class="mt-10 w-full align-items-center 
+        m-10" style="background-color: bisque;">
+            <thead>
+                <tr>
+                    <th>userId</th>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>body</th>
+                </tr>
+            </thead>
+            <tbody id="content">
+
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+<script src="./post.js"></script>
+
+</html>
