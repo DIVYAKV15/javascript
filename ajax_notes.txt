@@ -1,0 +1,6 @@
+AJAX is not programming language
+AJAX just uses a combination of :a  browser built in xmlHttpRequest class (to requeast data from a webserver) js and HTML DOM (to display or use the data) 
+
+AJAX is just a means of loading data from the server and selectively updating parts of a webpage without reloading the whole page
+Basicaaly what AJx does is make use of the browsers's built in XMLHttpRequest (XHR) objedtc to send and receive information to and from a webserver asynchronously .in the bg,without blocking the page or interfering with the user's experience
+The example of some large-scale Ajax-driven online application are Gmail,Google Maps,Googlr Docs,YouTube,Facebook,Flicket,and so many other applications

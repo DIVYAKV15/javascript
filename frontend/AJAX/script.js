@@ -8,7 +8,7 @@ const obj = new XMLHttpRequest()
 obj.open('get', 'https://jsonplaceholder.typicode.com/todos')
 //request send
 obj.send()
-//request send cheythutu response kitan oru time dalay edukum ah time delay calculate cheyyan anu readystate use cheyynnu ..ah readystate 4(max value) avumbo aanu respone kita 
+//request send cheythutu response kitan oru time delay edukum ah time delay calculate cheyyan anu readystate use cheyynnu ..ah readystate 4(max value) avumbo aanu respone kita 
 
 //as it is asynchronous time conusiming one 
 // so for giving after how long will it take to receive the response using readyState initially it will be 1 but it  should reach 4 then only we get the response so to change the readystate value to 4 we need to use onreadystatechange()

@@ -1,21 +1,21 @@
 function display(num) {
-    result.value += num;
+    res.value += num;
 }
 function clearAll() {
-    result.value = ""
+    res.value = ""
 }
 function backButton() {
 
-    result.value = result.value.slice(0, -1);
+    res.value = res.value.slice(0, -1);
 }
 //if we give any wrong evalutaion instead of showing undefined we have to show error eg:****10/6-
 function equalTo() {
     try {
-        result.value = eval(result.value) //it will evaluatet the value from the result box
+        res.value = eval(res.value) //it will evaluatet the value from the result box
     } catch (error) {
-        result.value = 'error'
+        res.value = 'error'
         setTimeout(() => {
-            result.value = ''
+            res.value = ''
         }, 1000) //  after showing error than in 1 second it should clear the result 
     }
 
