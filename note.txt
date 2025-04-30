@@ -1236,7 +1236,7 @@ Fetch
    ---------------
        - nammal kodutha request proper aitu solve cheythutu enkil resolve phases 
 
-       - if hte request is properly solved
+       - if the request is properly solved
        -then() - response can be accessed using then method 
 
  2) pending phases
@@ -1248,7 +1248,31 @@ Fetch
  3) reject phases
  -----------------
       -  nammal kodutha request proper aitu solve cheyyan patitillya enkil  reject phases 
-      - if hte request is not properly solved
+      - if the request is not properly solved
       -catch()- response will be accessed usinv catch method
 
- 
+
+-own
+----
+shortcut
+-------- 
+json browser il read cheyyan pattuna extension
+jsonview extension works in chrome
+- JSONView - add to chrome
+
+
+fetch('url',{ method:'post',
+headers:{},
+body:{}
+})
+
+- in fetch default aitu get aanu nadakunae but if we want to use post or put or delete that time we have to give method ..method is optional
+
+
+// fetch() sends an HTTP request and returns a Promise with a Response.
+
+// The Response contains metadata and the body, which you must parse (e.g., .json()).
+
+// Both steps return Promises, so you need to use .then() twice — once for the raw response, and again for the parsed data.
+
+ --------------------
