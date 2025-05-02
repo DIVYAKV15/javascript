@@ -56,3 +56,36 @@ fetch('https://fakestoreapi.com/products').then((response) => {
 // The Response contains metadata and the body, which you must parse (e.g., .json()).
 
 // Both steps return Promises, so you need to use .then() twice — once for the raw response, and again for the parsed data.
+
+//cart
+function cart() {
+    window.location = 'cart.html'
+}
+
+fetch('https://fakestoreapi.com/carts').then((res) => {
+    res.json().then((carts) => {
+        carts.forEach((items) => {
+            const productId = items.products.map((prod) => prod.productId);
+            const quantity = items.products.map((quan) => quan.quantity)
+
+
+            cart_table.innerHTML +=
+                `<tr>
+                         <td>${items.id}</td>
+                        <td>${items.userId}</td>
+                        <td>${items.date}</td>
+                        <td>Product IDs : ${productId}<br>Quantity : ${quantity} </td>
+                            
+                 </tr>`
+
+        })
+
+    })
+
+})
+
+
+
+
+
+

@@ -4,3 +4,99 @@ AJAX just uses a combination of :a  browser built in xmlHttpRequest class (to re
 AJAX is just a means of loading data from the server and selectively updating parts of a webpage without reloading the whole page
 Basicaaly what AJx does is make use of the browsers's built in XMLHttpRequest (XHR) objedtc to send and receive information to and from a webserver asynchronously .in the bg,without blocking the page or interfering with the user's experience
 The example of some large-scale Ajax-driven online application are Gmail,Google Maps,Googlr Docs,YouTube,Facebook,Flicket,and so many other applications
+
+
+Asynchronous- oru work nadakura time la matha work stop agama indha work kaga wait pannama continue  pannum whereas in synchronous means line by line exceute aitae irukum ..oru task mudincha dhan adudha task madakum 
+
+synchronous eg:queue
+asycnhronous :like hotel it depend upon the order it takes time to deliver 
+            
+AJAX - will not wait for refresh time 
+      in bg it will work 
+
+      for ex: oru register page la ela details um type panni then server ku send panni then server db la poi check pannitu varumbo error achuna user ku delay agum then kadupu agum so in that case it will take time
+
+      whereas oru oru field ah type pannumbovae - AJAX andha i/p ah server la anupi iruka nu bg la check pannum check pannitu without refreshing it will show if the user already exists
+
+      real time example:google when we type word it showing suggesion right in the bg AJAX will send the typing letter in server and server check the releavnt datan in db and displat the relavant word to the typed i/p
+
+
+      Synchronous vs. Asynchronous:
+
+Synchronous: Tasks are executed one after another, in order. Each task waits for the previous one to finish before it starts.
+Example: Like standing in a queue — the next person will only be served once the current person is done.
+
+Asynchronous: Tasks are initiated and then the program continues running without waiting for the current task to finish. The response or result will be handled later, often using callbacks, promises, or async/await.
+Example: Like ordering food in a restaurant — you place the order and continue talking or doing something else. The food arrives later when it's ready.
+
+✅ AJAX Explanation:
+AJAX (Asynchronous JavaScript and XML) allows web applications to send and receive data from a server in the background without refreshing the entire page.
+
+Example:
+
+Imagine a user registration form:
+
+Without AJAX: You fill all fields, click submit, the entire page reloads, and then it tells you the username is already taken — this feels slow and frustrating.
+
+With AJAX: As soon as you finish typing the username, it automatically checks with the server in the background. If the username is taken, it shows a message immediately — no page reload needed.
+
+Real-time Example:
+
+When you type in Google Search, suggestions start appearing instantly. This is AJAX working in the background — each keystroke sends a small request to the server, which checks and returns relevant suggestions without reloading the page.
+
+AJAX
+🔁 Synchronous vs. Asynchronous
+✅ Synchronous
+Executes line by line.
+
+Each task waits for the previous one to finish.
+
+Blocks further execution until the current task is done.
+
+🧾 Example:
+
+Like a queue – the next person is served only after the current one is done.
+
+✅ Asynchronous
+Does not block the execution.
+
+A task starts, and the program continues running.
+
+The result is handled later (via callback, Promise, or async/await).
+
+🍽️ Example:
+
+Like ordering food at a restaurant – you place the order, then continue your conversation; food comes when ready.
+
+⚡ AJAX (Asynchronous JavaScript and XML)
+📌 What is AJAX?
+AJAX (Asynchronous JavaScript and XML) is a web development technique used to:
+
+Send and receive data from a server asynchronously
+
+Without refreshing or reloading the entire web page
+
+It works in the background, allowing for a smoother and more dynamic user experience
+
+
+
+💡 Why use AJAX?
+❌ Without AJAX:
+User fills a full form, submits it, the whole page reloads, and then it shows errors (like "Username already exists") – causes delay and frustration.
+
+✅ With AJAX:
+As the user types (e.g., in the username field), the input is sent to the server in real-time.
+
+Server checks the database and returns a response.
+
+The frontend shows a message like "Username already taken" instantly, without refreshing.
+
+🌐 Real-Time Example: Google Search
+When you type, suggestions appear immediately.
+
+AJAX sends the typed letters to the server.
+
+Server searches for matching terms in the database.
+
+Relevant results are shown in real-time, without page reload.
+

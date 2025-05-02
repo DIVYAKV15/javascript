@@ -985,7 +985,7 @@ HTML source code:
 DOM (after JavaScript changes it):
 <p id="demo">Hello World!</p>
 -----------------
-date 
+date - user nde system ithnde time aanu show cheyya ..
 ----
 date is predefined class to fetch data from the system
 
@@ -1254,6 +1254,13 @@ Fetch
 
 -own
 ----
+
+public api
+---------
+countryapi
+fakestore api
+jsonplaceholder api
+
 shortcut
 -------- 
 json browser il read cheyyan pattuna extension
@@ -1276,3 +1283,11 @@ body:{}
 // Both steps return Promises, so you need to use .then() twice — once for the raw response, and again for the parsed data.
 
  --------------------
+
+ async-await
+ ---------
+ - it helps asynchronous function to behave like a synchronous function (parallely work cheyyan async-await help cheyyum)
+ - through that it helps to reduce callback hell
+ - instead of 2 then - can use here single then()
+ - store the response into a variable
+ - use try-catch method -errors handling
